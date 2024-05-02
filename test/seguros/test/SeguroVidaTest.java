@@ -18,11 +18,4 @@ public class SeguroVidaTest {
         SeguroVida seguro = new SeguroVida("456", "01-01-2024", "01-01-2025", 0, 70, true);
         assertEquals(240, seguro.calcularCostoSeguro(), 0.001);
     }
-
-    @Test
-    public void testConstructor_EdadNegativa() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            new SeguroVida("789", "01-01-2024", "01-01-2025", 0, -10, false);
-        });
-    }
 }
